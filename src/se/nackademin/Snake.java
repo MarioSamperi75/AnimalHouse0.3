@@ -8,10 +8,10 @@ public class Snake extends Animal {
             throw new IllegalArgumentException("invalid weight");
         this.foodQuantity = 20;
         kindOfFood = KindOfFood.SNAKE.foodname;
-    }
+    }//constructror
+
 
     public String getName() {
         return this.name;
-    }
-
-}
+    }//metod getName
+}//class Snake

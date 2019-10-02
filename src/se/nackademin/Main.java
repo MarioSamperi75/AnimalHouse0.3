@@ -16,14 +16,13 @@ public class Main {
 
     public Main() {
         AnimalFactory factory = new AnimalFactory();                            //STEG1: instansiering av objekt
-        List<Animal> listAnimal = new LinkedList<>();
+        List<Animal> animals = new LinkedList<>();
         for (int num = 0; num < 5; num++)                                       //STEG2: ifyllning av listan
-            listAnimal.add(factory.getAnimal(num));
+            animals.add(factory.getAnimal(num));
 
         while (true) {
             String inputName = inputName();                                     //STEG3: inäsning
-
-            String output = (checkName(inputName, listAnimal));                 //STEG4: kontroll
+            String output = (checkName(inputName, animals));                    //STEG4: kontroll
             JOptionPane.showMessageDialog(null, output) ;       //STEG5: utskrift
         }//while(true)
 
@@ -38,14 +37,15 @@ public class Main {
     }//metod inputname
 
                                                                                 //STEG4: kontroll
-    public static String checkName (String inputName, List<Animal>listAnimal) {
-        for (Animal animal : listAnimal) {
-            if (inputName.equals(animal.getName())) {                           //Exempel av polimorfism
-                return (animal.getName() + " ska få " + animal.foodQuantity +
-                                " gr av " + animal.kindOfFood);
+    public static String checkName (String inputName, List<Animal>animals) {
+        for (Animal i : animals) {
+            if (inputName.equals(i.getName())) {                                //Exempel av polimorfism
+                return (i.getName() + " ska få " + i.foodQuantity +
+                                " gr av " + i.kindOfFood);
             }//if
         }//for
             return "Namnet hittades inte";
+
     }//metod checkName
 
 }//class Main
