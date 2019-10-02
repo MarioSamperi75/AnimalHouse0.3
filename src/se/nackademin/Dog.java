@@ -3,15 +3,14 @@ package se.nackademin;
 public class Dog extends Animal implements PersonalDiet {
 
     public Dog(String name, int weight) {
-        super(name, weight);
-        if (weight<=0)
-            throw new IllegalArgumentException("invalid weight");
+        super(name, weight);                                        //inkapsling i constructror
+        if (weight<=0)                                              //ex. weight
+            throw new IllegalArgumentException("invalid weight");   // exception skapas
         this.createPersonalDiet(weight);                            // metod somm sätter foodQuantity
-        kindOfFood = KindOfFood.DOG.foodname;
-
+        kindOfFood = KindOfFood.DOG.foodname;                       // får värdet från Enum
     }
 
-    public void createPersonalDiet (int weight) { //jag väljer att använda int. Decimaler av grammer kan inte vara så viktiga.
+    public void createPersonalDiet (int weight) {                   //implementerar iterface
         this.foodQuantity = this.weight / 100;
     }
 

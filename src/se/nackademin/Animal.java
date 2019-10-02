@@ -7,8 +7,7 @@ public abstract class Animal {
     protected int foodQuantity;
     protected  String kindOfFood;
 
-
-    public Animal(String name, int weight) {
+    public Animal(String name, int weight) {                        //får argument från Factory
         this.name = name;
         this.weight = weight;
     }

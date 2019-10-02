@@ -18,11 +18,9 @@ public class AnimalFactory {
 
             else if (num==4)
                 return new Snake("Hypno",  1000);
-
-
         } //Try
 
-        catch (IllegalArgumentException e) {
+        catch (IllegalArgumentException e) {            //genererat i Dog, Cat och Snake constructors.
             System.out.println(e.getMessage());
             System.exit(0);
         }//catch
