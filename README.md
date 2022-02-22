@@ -1,2 +1,2 @@
 # AnimalHouse0.3
-Nackademins exercise about Enums 
+Nackademin's exercise about Enums 
